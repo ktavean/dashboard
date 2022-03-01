@@ -1,1 +1,1 @@
-# dashboard
+Dashboard project, started 1st of March 2022 as part of "The Odin Project" curriculum.
