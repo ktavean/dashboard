@@ -3,22 +3,29 @@
     padding: 0;
 }
 
-html {
-    height: 100vh;
-}
-
 #container {
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 0.1fr 1fr;
 }
 
 #header {
     grid-row: 1;
     grid-column: 2;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+}
+
+#header-top {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#header-bot {
+    grid-column: 1;
+    grid-row: 2;
 }
 
 #sidebar {
@@ -27,9 +34,90 @@ html {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    background: #3a89ff;
 }
 
 #content {
     grid-row: 2;
     grid-column: 2;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 0.1fr 1fr;
+    column-gap: 15px;
+    padding-left: 15px;
+    padding-bottom: 80px;
+    background: gray;
+}
+
+#content #projects {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+}
+
+#content #announce {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+}
+
+#left-content {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#right-content {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.2fr 1fr;
+    padding-right: 25px;
+}
+
+#right-content #trends {
+    align-self: end;
+}
+
+.project-box {
+    background: #FFFFFF;
+    border-radius: 10px;
+    border-left: 7px solid green;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr;
+    align-items: end;
+}
+
+.project-box h3 {
+    
+}
+
+.project-box p {
+    align-self: start;
+}
+
+.project-box-icons {
+    justify-self: right;
+}
+
+#announce-box {
+    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#trend-box {
+    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
 }
