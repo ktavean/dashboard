@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    --box-shadow-style: 1px 1px 5px 0.2px rgb(85, 85, 85);
 }
 
 #container {
@@ -15,17 +16,92 @@
     grid-column: 2;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 0.5fr);
+    background: #FFFFFF;
+    box-shadow: 0px 2px 5px black; /* de editat ca nu merge */
 }
 
 #header-top {
     grid-column: 1;
     grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+#header-top #search {
+    justify-self: left;
+}
+
+#header-top #profile {
+    justify-self: right;
+    display: grid;
+    grid-template-columns: 0.4fr 0.4fr 1fr;
+    column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#header-top #profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    justify-self: center;
+}
+
+#header-top #profile #username {
+    justify-self: left;
+}
+
+#header-top #profile #notifbut {
+    justify-self: right;
 }
 
 #header-bot {
     grid-column: 1;
     grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#header-bot #profile-bot {
+    justify-self: left;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: repeat(2, 0.5fr);
+    column-gap: 15px;
+}
+
+#header-bot #profile-bot img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    grid-column: 1;
+    grid-row: span 2;
+}
+
+#header-bot #profile-bot p {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: left;
+    align-self: end;
+}
+
+#header-bot #profile-bot h2 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: left;
+}
+
+#header-bot #buttons {
+    justify-self: right;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 #sidebar {
@@ -46,7 +122,7 @@
     column-gap: 15px;
     padding-left: 15px;
     padding-bottom: 80px;
-    background: gray;
+    background: lightgray;
 }
 
 #content #projects {
@@ -94,6 +170,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.5fr 1fr;
     align-items: end;
+    box-shadow: var(--box-shadow-style);
 }
 
 .project-box h3 {
@@ -113,6 +190,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    box-shadow: var(--box-shadow-style);
 }
 
 #trend-box {
@@ -120,4 +198,5 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
+    box-shadow: var(--box-shadow-style);
 }
