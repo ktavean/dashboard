@@ -17,6 +17,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 0.5fr);
+    padding-left: 50px;
+    padding-right: 50px;
     background: #FFFFFF;
     box-shadow: 0px 2px 5px black; /* de editat ca nu merge */
 }
@@ -25,13 +27,27 @@
     grid-column: 1;
     grid-row: 1;
     display: grid;
-    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-columns: 0.8fr 0.2fr;
     grid-template-rows: 1fr;
     align-items: center;
 }
 
 #header-top #search {
     justify-self: left;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+#header-top button {
+
+}
+
+#header-top input {
+    width: 800px;
+    width: clamp(500px, 40vw, 1000px);
 }
 
 #header-top #profile {
@@ -41,6 +57,7 @@
     column-gap: 25px;
     align-items: center;
     justify-items: center;
+    font-weight: bold;
 }
 
 #header-top #profile img {
@@ -89,6 +106,7 @@
     grid-row: 1;
     justify-self: left;
     align-self: end;
+    font-weight: bold;
 }
 
 #header-bot #profile-bot h2 {
