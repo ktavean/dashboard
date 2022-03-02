@@ -47,7 +47,7 @@
 
 #header-top input {
     width: 800px;
-    width: clamp(500px, 40vw, 1000px);
+    width: clamp(200px, 40vw, 1000px);
 }
 
 #header-top #profile {
