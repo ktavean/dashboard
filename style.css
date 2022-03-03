@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     --box-shadow-style: 1px 1px 5px 0.2px rgb(85, 85, 85);
+    --text-gray: #525252;
+    font-family: helvetica;
 }
 
 button {
@@ -14,6 +16,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 0.1fr 1fr;
+    row-gap: 3px;
 }
 
 #header {
@@ -28,7 +31,7 @@ button {
     padding-bottom: 15px;
     padding-top: 10px;
     background: #FFFFFF;
-    box-shadow: 0px 2px 5px black; /* de editat ca nu merge */
+    box-shadow: 1px 1px 5px black; /* de editat ca nu merge */
 }
 
 #header-top {
@@ -53,8 +56,14 @@ button {
     width: clamp(200px, 40vw, 1000px);
     height: 30px;
     border-radius: 20px;
-    background: lightgray;
+    background: #DDE3E0;
     border: none;
+}
+
+#header-top input:focus {
+    outline: none;
+    color: white;
+    font-weight: bold;
 }
 
 #header-top #profile {
@@ -135,14 +144,14 @@ button {
 
 #header-bot #buttons button {
     border-radius: 20px;
-    background: #228de6;
+    background: #23386C;
     color: #FFFFFF;
     padding: 10px 22px;
     font-weight: bold;
 }
 
 #header-bot #buttons button:hover {
-    background: #29a9e4;
+    background: #3757A9;
 }
 
 #sidebar {
@@ -152,13 +161,13 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.05fr 0.2fr 0.3fr;
-    background: #3a89ff;
+    background: #14213D;
     gap: 50px;
 }
 
 #sidebar a {
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: white;
     font-weight: bold;
 }
@@ -178,23 +187,25 @@ button {
     color: white;
 }
 
-#nav1 {
+#nav1, #nav2 {
     display: grid;
-    grid-template-columns: 0.15fr 0.7fr;
-    grid-template-rows: repeat(6, 0.1fr);
-    row-gap: 20px;
+    grid-template-columns: 0.7fr;
+    grid-template-rows: repeat(6, 0.15fr);
+    row-gap: 15px;
     align-items: center;
     padding-left: 20px;
 }
 
-
-#nav2 {
+#sidebar .links {
+    padding: 5px;
     display: grid;
-    grid-template-columns: 0.15fr 0.7fr;
-    grid-template-rows: repeat(3, 0.1fr);
-    row-gap: 20px;
-    align-items: center;
-    padding-left: 20px;
+    grid-template-columns: 0.2fr 0.8fr;
+}
+
+#sidebar .links:hover {
+    background: rgba(150, 172, 183, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .navicons {
@@ -210,12 +221,12 @@ button {
     grid-column: 2;
     display: grid;
     grid-template-columns: 5fr 1.4fr;
-    grid-template-rows: 0.1fr 1fr;
+    grid-template-rows: 0.1fr 1.5fr;
     row-gap: 10px;
     column-gap: 15px;
     padding-left: 15px;
     padding-bottom: 80px;
-    background: lightgray;
+    background: #DDE3E0;
 }
 
 #content #projects {
@@ -251,12 +262,13 @@ button {
 
 #right-content #trends {
     align-self: end;
+    padding-bottom: 10px;
 }
 
 .project-box {
     background: #FFFFFF;
-    border-radius: 10px;
-    border-left: 7px solid green;
+    border-radius: 5px;
+    border-left: 7px solid #6D1D0D;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 25px;
@@ -269,7 +281,9 @@ button {
 
 .project-box p {
     align-self: start;
-    color: lightgray;
+    color: var(--text-gray);
+    font-size: 15px;
+    margin-top: 5px;
 }
 
 .project-box-icons {
@@ -290,21 +304,23 @@ button {
     grid-template-rows: repeat(3, 0.2fr);
     box-shadow: var(--box-shadow-style);
     padding: 0px 25px;
+    border-radius: 5px;
 }
 
 #announce-box div:nth-child(-n +2) {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #c2bfbf;
 }
 
 .announcement {
-    padding-top: 25px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .announcement p {
     height: 40px;
+    color: var(--text-gray);
     overflow: hidden;
-    color: lightgray;
+    font-size: 14px;
 }
 
 #trend-box {
@@ -313,6 +329,7 @@ button {
     grid-template-columns: 0.3fr 0.7fr;
     grid-template-rows: repeat(4, 1fr);
     box-shadow: var(--box-shadow-style);
+    border-radius: 5px;
 }
 
 .profilepics {
@@ -332,6 +349,12 @@ button {
     align-self: center;
 }
 
+.entry p:nth-child(1) {
+    color: black;
+    font-weight: bold;
+}
+
 .entry p:nth-child(2) {
-    color: lightgray;
+    color: var(--text-gray);
+    font-size: 14px;
 }
