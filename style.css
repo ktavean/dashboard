@@ -151,7 +151,8 @@ button {
 }
 
 #header-bot #buttons button:hover {
-    background: #3757A9;
+    background: rgba(150, 172, 183, 0.5);
+    color: #23386C;
 }
 
 #sidebar {
